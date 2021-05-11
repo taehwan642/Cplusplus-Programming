@@ -30,7 +30,7 @@ auto
 main(void) -> int
 {
 	vector<Func> composedfunc;
-	double num = 1;
+	double value = 1;
 	transform(begin(inversefuncs), end(inversefuncs), begin(funcs), back_inserter(composedfunc), compose<double, double, double>);
 	/*
 	template<class InputIt1, class InputIt2,
@@ -64,7 +64,7 @@ main(void) -> int
 
 	for (auto iter : composedfunc)
 	{
-		std::cout << iter(num) << std::endl;
+		std::cout << iter(value) << std::endl;
 	}
 	return 0;
 }
